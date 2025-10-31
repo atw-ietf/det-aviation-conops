@@ -1,4 +1,4 @@
-# Interactions & Responsibilities
+# Roles, Responsibilities & Interactions
 
 This section outlines the various entity roles in the ecosystem. For each, it summarizes motivations for participating in that DRIP role, as well as the interactions and responsibilities they have in doing so. All entity roles, except as otherwise noted, MUST register a DET with a parent entity in the corresponding parental role (e.g. an HDA must register with an RAA), as per REF.HME.FACES, and MUST use it subsequently in all DRIP interactions requiring an entity ID.
 
@@ -66,7 +66,7 @@ Being associated with a USS has some operational benefits:
 An HDA Operator:
 
 - MUST register, with its parent RAA, one or more DETs, and use it or them in DRIP interactions
-- MUST implement interfaces and functions described in REF.HME.FACES
+- MUST implement interfaces and functions described in REF.HME.IFACES
 - MUST maintain DET registrations with relevant PII as required by their jurisdiction
 - MUST fulfill the requirements of their jurisdiction
 - SHOULD NOT provide to clients the ability to enable encryption of data elements considered PII, especially in Broadcast RID
@@ -74,7 +74,7 @@ An HDA Operator:
 As part of a USS an HDA Operator also:
 
 - MAY provide encryption ID services, if allowed by jurisdiction
-- MAY have its registration interfaces (REF.HME.FACES) be integrated into relevant USS interfaces and functions
+- MAY have its registration interfaces (REF.HME.IFACES) be integrated into relevant USS interfaces and functions
 - SHOULD defer the publishing of a client DET in DNS when it is bound with an Operational Intent until it is "active"
     - Methods to sync an Operational Intent in a USS state and DET state in HDA are out of scope for this document
 
@@ -86,9 +86,9 @@ Each RAA has the responsibility to delegate HDAs under them. Allocation methods 
 
 An RAA Operator:
 
-- MUST obtain an RAA value(s) from the Apex Operator and provide content for NS RRType(s), see {{ic}}
+- MUST obtain an RAA value(s) from the Apex Operator and provide content for NS RRType(s), see {{caa-ic}}
 - MUST register, with its parent (if any), one or more DETs, and use it or them in DRIP interactions
-- MUST implement interfaces and functions described in REF.HME.FACES
+- MUST implement interfaces and functions described in REF.HME.IFACES
 - MUST maintain DET registrations with relevant PII as required by their jurisdiction
 - MUST provide requirements for prospective HDA Operators, and SHOULD do so publicly via an easily located web site
 - MUST ensure HDA Operator compliance with this specification

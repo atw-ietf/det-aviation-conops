@@ -8,6 +8,13 @@ informative:
 
   STD95: # rdap
 
+  ANSI.CTA.2063A:
+    title: ANSI/CTA 2063-A Small Unmanned Aerial Systems Numbers
+    author:
+      -
+        org: "Consumer Technology Association (CTA)"
+    target: https://shop.cta.tech/products/small-unmanned-aerial-systems-serial-numbers
+    date: September 2019
   ASTM.F3411:
     title: Standard Specification for Remote ID and Tracking
     author:
@@ -45,7 +52,7 @@ informative:
       -
         org: International Civil Aviation Organization
     date: July 2025
-  ICAO.RID.Numbers:
+  ICAO.RID:
     title: ICAO Remote ID Number Registry
     author:
       -

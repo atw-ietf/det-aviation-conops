@@ -18,6 +18,8 @@ This document standardizes usage of Drone Remote Identification Protocol (DRIP) 
 
 {::include-nested sections/roles.mkd}
 
+{::include-nested sections/clarifications.mkd}
+
 {::include-nested sections/ietf/iana.mkd}
 
 {::include-nested sections/ietf/security.mkd}

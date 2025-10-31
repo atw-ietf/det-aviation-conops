@@ -2,6 +2,8 @@
 
 This section re-iterates, expands and clarifies specific elements as part of the various referenced standards for use of DETs specifically in the UAS/aviation ecosystem.
 
+Data structures in DRIP are extensible using a registry of interchange keys defined in REF.HME.IFACES. Policy by a CAA and/or DIME MAY add more keys than defined in this document to any structure or be redacted from an RDAP response based on a users credentials.
+
 ## Registration
 
 ### Client Request Keys
@@ -14,7 +16,7 @@ This document standardizes the use of keys that are REQUIRED and/or OPTIONAL dur
 | OPERATOR, PILOT | pilot_license_id | - | 
 {: #reg-add-keys title="Required Additional Keys for Registration"}
 
-Any additional keys not covered in {{reg-add-keys}} MUST be provide by the DIME to clients in some way. 
+Any additional keys not covered in the above table MUST be published by the DIME to clients in some way. 
 
 ### Client CSRs
 
@@ -22,7 +24,7 @@ Clients register using a DKIX-compliant Certificate Signing Request (CSR, {{dkix
 
 | HHIT Entity Type(s) | CSR Subject Type | Subject Contents |
 | ------------------- | ---------------- | ---------------- |
-| UA, UAS, RID | Serial Number | ANSI/CTA 2063-A UAS Serial Number |
+| UA, UAS, RID | Serial Number | {{ANSI.CTA.2063A}} UAS Serial Number |
 | OPERATOR | - | - |
 | PILOT | - | - |
 {: #reg-csr-subs title="CSR Subjects for Registration"}
@@ -51,11 +53,10 @@ This registration then provides the required certificate to be used in RDAP with
 
 ### RDAP Response Keys
 
-{{rdap-keys}} is a list of the additional keys expected for each HHIT Entity Type. The CAA and/or DIME may add more to any of these definitions. 
+{{rdap-keys}} is a list of the additional keys expected for each HHIT Entity Type as apart of an RDAP response. Note that any of the fields defined here MAY be redacted due to policy based on the users credentials for access.
 
 | HHIT Entity Type(s) | Additional Keys |
 | ------------------- | --------------- |
 | UA, UAS, RID | be_chain, oracle_x509, uas, utm, registrant, caa_assigned_id, uas_serial_number |
 | OPERATOR, PILOT | pilot_license_id, oracle_x509 |
-
-Any key, other than those defined directly in REF.HME.IFACES as part of the model specification, MAY be redacted based on policy, from DIME and/or CAA, of a users credentials.
+{: #rdap-keys title="RDAP Response Keys"}
