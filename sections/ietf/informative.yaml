@@ -1,0 +1,72 @@
+informative:
+  RFC4108: # ???
+  RFC5280: # pkix
+  RFC5952: # ipv6
+  RFC8126: # iana-considerations
+  RFC8610: # cddl
+  RFC9063: # hip arch
+
+  STD95: # rdap
+
+  ASTM.F3411:
+    title: Standard Specification for Remote ID and Tracking
+    author:
+      -
+        org: ASTM International
+    target: https://www.astm.org/f3411-22a.html
+    date: July 2022
+    seriesinfo:
+      ASTM: F3411-22A
+      DOI: 10.1520/F3411-22A
+  ASTM.F3548:
+    title: Standard Specification for UAS Traffic Management (UTM) UAS Service Supplier (USS) Interoperability
+    author:
+      -
+        org: ASTM International
+    target: https://www.astm.org/f3548-21.html
+    date: July 2025
+    seriesinfo:
+      ASTM: F3548-21
+      DOI: 10.1520/F3548-21
+  ASTM.F3586:
+    title: Standard Practice for Remote ID Means of Compliance to Federal Aviation Administration Regulation 14 CFR Part 89
+    author:
+      -
+        org: ASTM International
+    target: https://www.astm.org/f3411-22a.html
+    date: July 2022
+    seriesinfo:
+      ASTM: F3586-22
+      DOI: 10.1520/F3586-22
+
+  ICAO.ACCP:
+    title: ICAO Aviation Common Certificate Policy
+    author:
+      -
+        org: International Civil Aviation Organization
+    date: July 2025
+  ICAO.RID.Numbers:
+    title: ICAO Remote ID Number Registry
+    author:
+      -
+        org: International Civil Aviation Organization
+    target: https://www.icao.int/airnavigation/IATF/Pages/ASTM-Remote-ID.aspx
+    date: July 2025
+
+  IEEE.802.1AR:
+    title: IEEE Standard for Local and Metropolitan Area Networks - Secure Device Identity
+    author:
+      -
+        org: IEEE
+    target: https://doi.org/10.1109/ieeestd.2018.8423794
+    date: July 2025
+    seriesinfo:
+      DOI: 10.1109/ieeestd.2018.8423794
+
+  IANA.DRIP:
+    title: Drone Remote ID Protocol
+    author:
+      -
+        org: IANA
+    target: https://www.iana.org/assignments/drip/
+    date: Oct 2025
