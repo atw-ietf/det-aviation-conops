@@ -1,8 +1,8 @@
 # Concept of Operations for DRIP Entity Tag (DET) Usage in a UAS Ecosystem
 
-This is the working area for the IETF [DRIP Working Group](https://datatracker.ietf.org/wg/drip/documents/) Internet-Draft, "DRIP Registries".
+This is the working area for the IETF Internet-Draft, "Concept of Operations for DRIP Entity Tag (DET) Usage in a UAS Ecosystem".
 
-* [Working Group Draft](https://tools.ietf.org/html/draft-ietf-drip-registries)
+This document is intended to be submitted to DronesQuad for evaluation to become a Means of Compliance for UAS Remote Identification Session IDs.
 
 ## Building the Draft
 
@@ -12,10 +12,4 @@ Formatted text, XML and HTML versions of the draft can be built using `make`.
 $ make
 ```
 
-This requires that you have the necessary software installed.  See
-[the instructions](https://github.com/martinthomson/i-d-template/blob/master/doc/SETUP.md).
-
-## Contributing
-
-See the
-[guidelines for contributions](https://github.com/ietf-wg-drip/draft-ietf-drip-auth/blob/master/CONTRIBUTING.md).
+This requires that you have the necessary software installed. See [the instructions](https://github.com/martinthomson/i-d-template/blob/master/doc/SETUP.md).
