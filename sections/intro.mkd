@@ -29,6 +29,20 @@ The archetypal case is a UAS for which the DET serves as both the UAS ID (first 
 
 > Author Note: narrow context for at least first bullet above.
 
-### Targeted DRIP Requirements
+### Targeted DronesQuad Criteria
 
-The following requirements of {{RFC9153}} are satisfied when following this document: TBD.
+See {{DsQ.Criteria}} for expanded details.
+
+#### 010: Aerial Complementary Equipment and Services (ACES)
+
+#### 040: Systems Safety & Reliability
+
+#### 050: Cybersecurity
+
+#### 070: Position, Navigation & Timing
+
+#### 080: Signal Monitoring & Transmission (C2 Link)
+
+#### 090: Collision Avoidance - Detect and Avoid (DAA)
+
+#### 200: Flight Data Recording

@@ -46,6 +46,14 @@ informative:
       ASTM: F3586-22
       DOI: 10.1520/F3586-22
 
+  DsQ.Criteria:
+    title: DronesQuad High-level Product Safety Criteria (HPSCriteria)
+    author:
+      -
+        org: DronesQuad
+    target: https://github.com/ietf-wg-drip/external-docs
+    date: November 2025
+
   ICAO.ACCP:
     title: ICAO Aviation Common Certificate Policy
     author:
