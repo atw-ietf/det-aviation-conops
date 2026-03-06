@@ -1,6 +1,6 @@
 # Roles, Responsibilities & Interactions {#roles}
 
-This section outlines the various entity roles in the ecosystem. For each, it summarizes motivations for participating in that DRIP role, as well as the interactions and responsibilities they have in doing so. All entity roles, except as otherwise noted, MUST register a DET with a parent entity in the corresponding parental role (e.g. an HDA must register with an RAA), as per REF.HME.FACES, and MUST use it subsequently in all DRIP interactions requiring an entity ID.
+This section outlines the various entity roles in the ecosystem. For each, it summarizes motivations for participating in that DRIP role, as well as the interactions and responsibilities they have in doing so. All entity roles, except as otherwise noted, MUST register a DET with a parent entity in the corresponding parental role (e.g. an HDA must register with an RAA) and MUST use it subsequently in all DRIP interactions requiring an entity ID.
 
 ## UAS Observers
 
@@ -54,51 +54,37 @@ This document assumes a UAS Manufacturer is already in compliance with {{ASTM.F3
 
 ## HDA Operators
 
-In the UTM context, it is expected that the HDA function will be provided by a UAS Service Supplier (USS) to its clients (e.g. UAS Operators). This can be in-house or out-sourced to a service bureau more specialized in cryptographically verifiable identifiers usable to access data and systems on networks. Outside the UTM context, an HDA can be a stand-alone provider to any registrant desiring a DET, or more generally HHIT.
+The technical responsibilities of an HDA Operator are covered in REF.OME.IFACES.
+
+In the UTM context, it is expected that the HDA function will be provided by a UAS Service Supplier (USS) to its clients (e.g. UAS Operators). This can be in-house or out-sourced to a service bureau running as a Supplemental Data Service Provider (SDSP) more specialized in cryptographically verifiable identifiers usable to access data and systems on networks.
+
+### USS/HDA Operators
 
 Being associated with a USS has some operational benefits:
 
 - Ease for UAS Operators to use both Session IDs and UTM together
-- Binding between the DET and Operational Intent
-    - Enables safer use of encryption
-    - Ability to keep DET private until just before an operation goes active
+- Binding/synchronization between DETs and Operational Intents
+  - Enables, with jurisdiction approval, use of encryption services
+  - Ability to keep DET private until just before an operation goes active
 
-An HDA Operator:
+### SDSP/HDA Operators
 
-- MUST register, with its parent RAA, one or more DETs, and use it or them in DRIP interactions
-- MUST implement interfaces and functions described in REF.OME.IFACES
-- MUST maintain DET registrations with relevant PII as required by their jurisdiction
-- MUST fulfill the requirements of their jurisdiction
-- SHOULD NOT provide to clients the ability to enable encryption of data elements considered PII, especially in Broadcast RID
-
-As part of a USS an HDA Operator also:
-
-- MAY provide encryption ID services, if allowed by jurisdiction
-- MAY have its registration interfaces (REF.OME.IFACES) be integrated into relevant USS interfaces and functions
-- SHOULD defer the publishing of a client DET in DNS when it is bound with an Operational Intent until it is "active"
-    - Methods to sync an Operational Intent in a USS state and DET state in HDA are out of scope for this document
+Having and HDA as a SDSP can provide unified identifiers across a UTM or set of USS in a UTM. More than one SDSP may be available giving USS and their clients choices to distribute anonymity.
 
 ## RAA Operators
 
-In the context of this document, RAA Operators are typically CAAs or other cognizant authorities of a Nation State. Each Nation State is allocated four RAA values that are used at their discretion. To obtain these allocations, a Nation State contacts the Apex operator for the UAS or other applicable hierarchy, currently IANA on behalf of ICAO, requesting their provisioning providing any details required by the Apex Operator to configure domain delegations.
+The technical responsibilities of an RAA Operator are covered in REF.OME.IFACES.
 
-Each RAA has the responsibility to delegate HDAs under them. Allocation methods of HDA values are at the discretion of the RAA Operator and their policies. Any requirements to operate under an RAA, beyond those as defined in this document to operate as an HDA, are out of scope for this document.
+In the context of this document, RAA Operators are typically CAAs or other cognizant authorities of a Nation State. Each Nation State is allocated four RAA values that are used at their discretion. To obtain these allocations, a Nation State contacts the Apex Operator (IANA) requesting provisioning out of the ISO Countries range providing any details required by the Apex Operator to configure domain delegations.
 
-An RAA Operator:
+While specific details are out of scope and are left as national matters, RAA Operators are expected to confirm HDA Operators are in compliance with any required specifications to serve their role. RAAs are also expected in the aviation ecosystem to provide the Oracle as a Service function of REF.OME.IFACES.
 
-- MUST obtain an RAA value(s) from the Apex Operator and provide content for NS RRType(s), see {{caa-ic}}
-- MUST register, with its parent (if any), one or more DETs, and use it or them in DRIP interactions
-- MUST implement interfaces and functions described in REF.OME.IFACES
-- MUST maintain DET registrations with relevant PII as required by their jurisdiction
-- MUST provide requirements for prospective HDA Operators, and SHOULD do so publicly via an easily located web site
-- MUST ensure HDA Operator compliance with this specification
+In the context of aviation pre-allocated RAAs to CAAs are currently expected to mutually cross-certify as specified in {{ICAO.ACCP}}.
 
 > Author Note: subsection or appendix on a potential RAA scheme for CAA? i.e. 1x MIL, 1x GOV, 1x COMMERCIAL, 1x SPARE with some example guidance on HDA allocation?
 
 ## Apex Operators
 
-The Apex role is the administration root and the domain apex for a specific IPv6 prefix which are typically associated with an industry sector (i.e. DETs being for aviation). This translates to the technical tasking of delegating RAA values and maintaining the reverse DNS zone associated with the allocated IPv6 prefix which contain the DNS delegations to RAAs. An Apex in its capacity as the administration root MAY endorse the required RAA delegation in the hierarchy.
+The technical responsibilities of an Apex Operator are covered in REF.OME.IFACES.
 
 Currently IANA performs the functions of RAA delegation (with no endorsement) and DNS zone maintenance for the DET prefix. This is largely a custodial task as critical portions of the RAA range, with regards to aviation, are already reserved or allocated with the rest of the range unassigned.
-
-In the context of aviation pre-allocated RAAs to CAAs are currently expected to mutually cross-certify as specified in {{ICAO.ACCP}}.
