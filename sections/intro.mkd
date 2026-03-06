@@ -35,11 +35,11 @@ See {{DsQ.Criteria}} for expanded details.
 
 #### 010: Aerial Complementary Equipment and Services (ACES)
 
-Systems under this criteria category will need to interact with others in a secure manner. DETs are a flexible Internet based tool that can be leveraged to provide security. This can be as simple as using the DET as a Key ID of some kind in existing protocol exchanges like JOSE or more in-depth implementations lower in the protocol stack.
+Systems under this criteria will need to interact with others in a secure manner. DETs are a flexible technology that can be leveraged to provide security. This can be as simple as using the DET as a Key ID of some kind in existing protocol exchanges like JOSE or more in-depth implementations lower in the protocol stack.
 
-#### 040: Systems Safety & Reliability
+#### 040: Systems, Safety & Reliability
 
-TBD
+DETs through the cryptographic properties provide support for system safety.
 
 #### 050: Cybersecurity
 
@@ -47,7 +47,7 @@ The concept of DETs are steeped in cybersecurity. The use of HHITs and the agile
 
 #### 070: Position, Navigation & Timing
 
-TBD
+DETs enable the authentication of PNT information for other actors and allow trust to be obtained in other actors information.
 
 #### 080: Signal Monitoring & Transmission (C2 Link)
 
@@ -55,7 +55,7 @@ DETs are a form of HHIT, which are the evolution of the Host Identity Tags (HIT)
 
 #### 090: Collision Avoidance - Detect and Avoid (DAA)
 
-When DETs are used as part of systems that are consumed by DAA systems, those systems can perform reliable trust assessment of the information being received.
+When DETs are used as part of systems that are consumed by DAA systems, those systems can perform reliable trust assessment of the information being received. Using DRIP as specified in {{RFC9575}} enables verification of information over Broadcast RID without Internet infrastructure.
 
 #### 200: Flight Data Recording
 

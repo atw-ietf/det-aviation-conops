@@ -6,7 +6,7 @@ Data structures in DRIP are extensible using a registry of aviation keys used in
  
 This document standardizes the use of an aviation key (REQUIRED, OPTIONAL or RECOMMENDED) based on the HHIT Entity Type. A `*` character in a given cell of {{tbl-inquiry-keys}}, {{tbl-response-keys}} or {{tbl-rdap-keys}} indicates all HHIT Entity Types for the given normative language column apply.
 
-DIMEs MUST provide to their clients in a public form the following information:
+DIMEs MUST provide to their clients in a public method the following information:
 
 - Additional aviation keys supported in a registration inquiry ({{inquiry-keys}})
 - Additional aviation keys clients should expect to be returned in a registration response ({{response-keys}})
@@ -21,7 +21,7 @@ RAAs MUST implement the Oracle as a Service (OaaS) of REF.HME.IFACES. Failure to
 
 DIMEs MUST use the `/.well-known/ome/register` endpoint for interoperable client discovery. See REF.HME.IFACES for implementation details.
 
-### Registration Inquiry Keys {#inquiry-keys}
+### Inquiry Keys {#inquiry-keys}
 
 | Key Name | REQUIRED | OPTIONAL | RECOMMENDED |
 | -------- | -------- | -------- | ----------- |
@@ -35,7 +35,7 @@ DIMEs MUST use the `/.well-known/ome/register` endpoint for interoperable client
 | uas | | | UAS, RID |
 {: #tbl-inquiry-keys title="Aviation Keys for Registration Inquiry"}
 
-### Registration Response Keys {#response-keys}
+### Response Keys {#response-keys}
 
 | Key Name | REQUIRED | OPTIONAL | RECOMMENDED |
 | -------- | -------- | -------- | ----------- |
