@@ -10,7 +10,7 @@ A DKIX-compliant Certificate Authority implements the following items to endorse
 
 - OKIX certificates following {{dkix-lite}}
 - OKIX certificates following {{dkix-full}}; to be used as the Canonical Registration Certificate in the DNS
-- Endorsements in alignment with {{Section 4.2 of RFC9575}}; for any HHIT Entity Type that returns them per {{response-keys}}
+- Endorsements in alignment with {{Section 4.2 of RFC9575}}; for any HHIT Entity Type that returns the aviations keys of `be` and `be_chain` per {{response-keys}}
 
 ### Signing Request {#dkix-csr}
 
