@@ -24,7 +24,7 @@ This document governs use of a DET in the following cases:
 2. An entity that uses a DET as an authentication key ID to participate in authenticated DRIP interactions
 3. An entity using a DET for any other legal purpose that requires a strongly cryptographically verifiable IP-based identifier
 
-The archetypal case is a UAS for which the DET serves as both the UAS ID (first case above) and the Authentication Key ID (second case). Application of this document in a UAS context overlays on the existing {{ASTM.F3586}}, a MOC for UAS RID in compliance with United States (US) CAA regulations, to enable support of the archetypal case in Broadcast RID.
+The prototypical case is a UAS for which the DET serves as both the UAS ID (first case above) and the Authentication Key ID (second case). Application of this document in a UAS context builds into the existing {{ASTM.F3586}}, a MOC for UAS RID in compliance with United States (US) CAA regulations, to enable support of this case in Broadcast RID.
 
 ### Targeted DronesQuad Criteria
 
