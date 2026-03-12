@@ -55,7 +55,7 @@ This document assumes a UAS Manufacturer is already in compliance with {{ASTM.F3
 
 The technical responsibilities of an HDA Operator are covered in REF.OME.IFACES.
 
-In the UTM context, it is expected that the HDA function will be provided by a UAS Service Supplier (USS) to its clients (e.g. UAS Operators). This can be in-house or out-sourced to a service bureau running as a Supplemental Data Service Provider (SDSP) more specialized in cryptographically verifiable identifiers usable to access data and systems on networks.
+In the UTM context, it is expected that the HDA function will be provided by a UAS Service Supplier (USS) to its clients (e.g. UAS Operators). The HDA function may be ran in-house or out-sourced by the USS to a service bureau running as a Supplemental Data Service Provider (SDSP) more specialized in cryptographically verifiable identifiers usable to access data and systems on networks.
 
 ### USS/HDA Operators
 
