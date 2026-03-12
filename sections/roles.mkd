@@ -10,8 +10,8 @@ An Observer is typically either an individual who has a device capable of wirele
 
 All Observers supporting DRIP:
 
-- adhere to relevant details of {{Section 6.4.2 of RFC9575}} with regards to receive processing of DRIP SAMs.
-  - Processing of SAMs could be deferred or outsourced to a dedicated system.
+- adhere to relevant details of {{Section 6.4.2 of RFC9575}} with regards to receive processing of DRIP Special Authentication Method (SAM) data.
+  - Processing of SAM data could be deferred or outsourced to a dedicated system.
 - display all DETs following {{RFC5952}} or as described in {{hid-abbrev}}.
 
 > Author Note: as justification for "processing MAY be deferred": Intention here was to allow for Observers not needing to fully process data if desired and push said processing to SDSPs. An example is a slim Finder concept that does no parsing of RID data, just extraction out of transport framing.
