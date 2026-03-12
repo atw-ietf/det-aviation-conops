@@ -5,7 +5,7 @@ The DKIX is part of the {{ICAO.ACCP}} to support not just UAS but also general a
 - all entities 
   - use {{RFC9374}} for identity (key algorithm; EdDSA) and identifier
   - register using REF.OME.IFACES including {{csr-subject}} and {{cert-san-hmn}}
-- all Certificate Authorities 
+- all Certificate Authorities (e.g., HDA, RAA)
   - issue certificates following REF.OME.IFACES and REF.OME.IFACES including {{cert-san-hmn}} and {{cert-ca-policy}}
   - issue Endorsements following {{Section 4.2 of RFC9575}} for any HHIT Entity Type that returns the aviations keys of `be` and `be_chain` per {{response-keys}}
 
@@ -15,7 +15,7 @@ For REF.OME.IFACES, when the HHIT Entity Type being registered is UA, UAS or RID
 
 ## Subject Alternative Name: Hardware Module Name {#cert-san-hmn}
 
-A UAS Manufacturer could follow {{IEEE.802.1AR}} which specifies the use of a Subject Alternative Name from {{Section 5 of RFC4108}}. This can be present in an Operational certificate issued from UAS Manufacturers running a DIME along with the originating Certificate Signing Request. It's presence indicates that the notAfter field of the Operational certificate is to be set to `99991231235959Z`.
+A UAS Manufacturer could follow {{IEEE.802.1AR}} which specifies the use of a Subject Alternative Name from {{Section 5 of RFC4108}}. This can be present in an Operational certificate issued from UAS Manufacturers running a DIME along with the originating Certificate Signing Request. It's presence indicates that the notAfter field of the Operational certificate has no well-defined expiration date.
 
 ## Full Profile: CA Policy OID {#cert-ca-policy}
 
