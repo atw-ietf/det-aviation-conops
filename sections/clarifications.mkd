@@ -17,7 +17,7 @@ To declare the map elements being using in any of the DIME structures the regist
 
 ## Registration
 
-Registration services are provided via a POST HTTPS interface that consumes and produces either COSE or JOSE objects. The DIMEs Authorization certificate can be used in HTTPS for server side authentication.
+Registration services are provided via a POST HTTPS interface that consumes and produces either COSE or JOSE objects. The DIME's Authorization certificate can be used in HTTPS for server side authentication.
 
 DIMEs provide the registration service under the `/.well-known/ome/register` endpoint for interoperable client discovery. See REF.OME.IFACES for implementation details.
 
@@ -54,7 +54,7 @@ DIMEs provide query services under the `/.well-known/ome/query/` endpoint for in
 
 ### Uniform Resource Identifier {#query-uri}
 
-The DIMEs Issuing certificate contain the base portion of the URI as described in OKIX. Clients obtain the base URI of a given DET by performing the recursive lookup to obtain the Issuing certificate.
+The DIME's Issuing certificate contain the base portion of the URI as described in OKIX. Clients obtain the base URI of a given DET by performing the recursive lookup to obtain the Issuing certificate.
 
 Clients construct the full query string by concatenating the base URI from a certificate and the `/.well-known/ome/query/<ipv6>` of the desired DET before performing the HTTPS GET call. 
 
