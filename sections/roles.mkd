@@ -4,14 +4,14 @@ This section outlines the various entity roles in the ecosystem. For each, it su
 
 ## UAS Observers
 
-An Observer is typically an individual who has a device capable of wirelessly receiving Broadcast RID whether it be an opportunistic passerby with a local-only (i.e. non-Internet connected) smartphone application or a widely deployed sensing system with various IP-based back-hauls. Each has their own motivations for detecting a UAS in their area and querying for additional information. Typically in DRIP, Observers are expected to use DNS (when able) to obtain at least the public keys of unknown DETs and use it to validate signatures found in {{ASTM.F3411}} Authentication Messages. Some Observers may be granted, by cognizant authorities, authorization to perform more detailed queries of further information, that is considered private (as not explicitly classified as public, placed in DNS, and/or transmitted in cleartext in Broadcast RID).
+An Observer is typically either an individual who has a device capable of wirelessly receiving Broadcast RID such as an opportunistic passerby with a smartphone application or a widely deployed sensing system with various IP-based back-hauls. Each has their own motivations for detecting a UAS in their area and querying for additional information. Typically in DRIP, Observers are expected to use DNS (when able) to obtain at least unknown public keys to validate signatures found in {{ASTM.F3411}} Authentication Messages. Some Observers may be granted, by cognizant authorities, authorization to perform more detailed queries of further information, that is considered private (as not explicitly classified as public, placed in DNS, and/or transmitted in cleartext in Broadcast RID).
 
 > Author Note:  Broadcast RID here can be dropped or substituted for some phrase comparing Observers to a sensor head, but distinct from a Display-only Observer. If that makes sense and if it is a good distinction to have? One could say Display Applications are in a way Observers (albeit very far removed from the field in most cases where the term is used). Unless we make them their own class of users that could use DETs (and for what?)
 
 All Observers supporting DRIP:
 
-- adhere to relevant details of {{Section 6.4.2 of RFC9575}} with regards to receive processing of DRIP SAMs.
-  - Processing of SAMs could be deferred or outsourced to a dedicated system.
+- adhere to relevant details of {{Section 6.4.2 of RFC9575}} with regards to receive processing of DRIP Special Authentication Method (SAM) data.
+  - Processing of SAM data could be deferred or outsourced to a dedicated system.
 - display all DETs following {{RFC5952}} or as described in {{hid-abbrev}}.
 
 > Author Note: as justification for "processing MAY be deferred": Intention here was to allow for Observers not needing to fully process data if desired and push said processing to SDSPs. An example is a slim Finder concept that does no parsing of RID data, just extraction out of transport framing.
@@ -37,39 +37,38 @@ To participate a UAS Operator uses a DET, registered either with an RAA or HDA, 
 
 ## UAS Manufacturers
 
-While UAS Manufactures do not have a direct requirement for DRIP, they typically wish to maintain good reputation of their brands and are often driven by market forces. Such forces include requirements and preferences of both UAS Observers and Operators.
-
 This document assumes a UAS Manufacturer is already in compliance with {{ASTM.F3411}}. Thus those that wish to support DRIP also:
 
-- provides a mechanism, typically through a GCS, to generate and register a DET for use as either a Session ID, Authentication Key ID or both
-  - bind DET to both UAS Serial Number and Operator. Binding can be indirect if system can verify Serial Number already registered to Operator
-  - are issued in a manner that keeps private key **only** ever on UA, does not expose it to GCS etc., but could be done in manner that exposes it to GCS or Operator if necessary
-  - allows user selection of a parent DIME (typically HDA) using a URI, Hierarchy ID (HID) value, or both
-  - supports registering multiple DETs in a batch transaction
+- provides a mechanism, typically through a GCS, to generate and register a DET.
+  - DET for use as either a Session ID, Authentication Key ID or both.
+  - bind DET to both UAS Serial Number and Operator. Binding can be indirect if HDA can verify Serial Number already registered to Operator.
+  - are issued in a manner that keeps private key **only** ever on UA, but could be done in manner that exposes it to GCS or Operator if necessary.
+  - allows user selection of a parent DIME (typically HDA) using a URI, Hierarchy ID (HID) value, or both.
+  - supports registering multiple DETs in a batch transaction.
 - provides a mechanism to enable, during registration, subsequent encryption of selected fields (e.g. pilot/GCS location), only if the CAA allows it.
-- follows {{Section 6 of RFC9575}} as it relates to transmission of SAMs, when using DET as an Authentication Key ID
-- in the {{ASTM.F3411}} Basic ID Message, sets the UAS ID Type to Specific Session ID, Specific Session ID Type to DRIP Entity ID, and encode the DET in network byte order, when using DET as a UAS Session ID
-- uses a DET, following {{Section 4.2 of RFC9374}}, as a UAS Serial Number {{ANSI.CTA.2063A}}
-  - It is expected that the UAS Manufacturer runs their own HDA, under which these DETs are registered
+- follows {{Section 6 of RFC9575}} as it relates to transmission of SAM data when using DET as an Authentication Key ID.
+- in the {{ASTM.F3411}} Basic ID Message, sets the UAS ID Type to Specific Session ID, Specific Session ID Type to DRIP Entity ID, and encode the DET in network byte order, when using DET as a UAS Session ID.
+- may use a DET, following {{Section 4.2 of RFC9374}}, as a UAS Serial Number {{ANSI.CTA.2063A}}.
+  - It is expected that the UAS Manufacturer runs their own HDA, under which these DETs are registered.
 
 ## HDA Operators
 
 The technical responsibilities of an HDA Operator are covered in REF.OME.IFACES.
 
-In the UTM context, it is expected that the HDA function will be provided by a UAS Service Supplier (USS) to its clients (e.g. UAS Operators). This can be in-house or out-sourced to a service bureau running as a Supplemental Data Service Provider (SDSP) more specialized in cryptographically verifiable identifiers usable to access data and systems on networks.
+In the UTM context, it is expected that the HDA function will be provided by a UAS Service Supplier (USS) to its clients (e.g. UAS Operators). The HDA function may be ran in-house or out-sourced by the USS to a service bureau running as a Supplemental Data Service Provider (SDSP) more specialized in cryptographically verifiable identifiers usable to access data and systems on networks.
 
 ### USS/HDA Operators
 
-Being associated with a USS has some operational benefits:
+Associating an HDA with the USS has some operational benefits:
 
-- Ease for UAS Operators to use both Session IDs and UTM together
-- Binding/synchronization between DETs and Operational Intents
-  - Enables, with jurisdiction approval, use of encryption services
-  - Ability to keep DET private until just before an operation goes active
+- Ease for UAS Operators to use both Session IDs and UTM together.
+- Binding/synchronization between DETs and Operational Intents.
+  - Enables, with jurisdiction approval, use of encryption services.
+  - Ability to keep DET private until just before an operation goes active.
 
 ### SDSP/HDA Operators
 
-Having and HDA as a SDSP can provide unified identifiers across a UTM or set of USS in a UTM. More than one SDSP may be available giving USS and their clients choices to distribute anonymity across providers.
+Having and HDA as a SDSP can provide unified identifiers across a UTM or a set of USSs in a UTM. More than one SDSP may be available giving USS and their clients choices to distribute registrations across providers.
 
 ## RAA Operators
 
