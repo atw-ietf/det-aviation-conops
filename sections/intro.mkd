@@ -48,7 +48,7 @@ DETs enable the authentication of PNT information for other actors and allow tru
 
 #### 080: Signal Monitoring & Transmission (C2 Link)
 
-DETs are a form of HHIT, which are the evolution of the Host Identity Tags (HIT) of the Host Identity Protocol (HIP). HIP provides deconflation of identity and locators in IP-based networks and also has the benefits of multi-homing and mobility in said networks. This is desirable attributes for C2 links of UAS that use a variety of media topologies and those that require frequent hand-offs (such as cellular). 
+DETs are a form of HHIT, which are the evolution of the Host Identity Tags (HIT) of the Host Identity Protocol (HIP) {{RFC 7401}}. HIP provides deconflation of identity and locators in IP-based networks and also has the benefits of multi-homing and mobility in said networks. This is desirable attributes for C2 links of UAS that use a variety of media topologies and those that require frequent hand-offs (such as cellular). 
 
 #### 090: Collision Avoidance - Detect and Avoid (DAA)
 
