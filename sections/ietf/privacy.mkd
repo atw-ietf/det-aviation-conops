@@ -6,7 +6,7 @@ The considerations discussed in {{RFC9153}} and {{Section 10 of RFC9434}} apply.
 
 ## DETs as Session ID and Authentication Key ID {#det-ptc}
 
-The properties of a DET allow it to be used as a Session ID and/or an Authentication Key ID. There may be scenarios in which Session IDs are desired for privacy but Authentication is not; although this may reduce transparency and security, a DET may be used exclusively as a Session ID in such. There are scenarios in which Authentication is desired but Session IDs are not (e.g. where a CAA does not allow Session IDs); a DET may be used exclusively as an Authentication Key ID in such. In the scenario expected to be most common, both Session IDs and Authentication are desired; the same DET should be used as both the Session ID and Authentication Key ID in such. Consequences and operational impact of using different DETs for the Session ID and Authentication Key ID of the same entity are unknown and not covered in this document.
+The properties of a DET allow it to be used as a Session ID and/or an Authentication Key ID. There may be scenarios in which Session IDs are desired for privacy but Authentication is not; although this may reduce transparency and security, a DET may be used exclusively as a Session ID in such. There are scenarios in which Authentication is desired but Session IDs are not (e.g. where a CAA does not allow Session IDs); a DET may be used exclusively as an Authentication Key ID in such. In the scenario expected to be most common, both Session IDs and Authentication are desired; the same DET should be used as both the Session ID and Authentication Key ID in such.
 
 ## Selective Encryption
 
