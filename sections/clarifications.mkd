@@ -63,9 +63,9 @@ Clients construct the full query string by concatenating the base URI from a cer
 | Aviation Key | Required | Optional | Recommended |
 | ------------ | -------- | -------- | ----------- |
 | canon_x | * | | |
-| canon_chain | * | | |
+| canon_chain | RAA, HDA, UAS, RID, ... | | |
 | be | APEX, RAA, HDA, UAS, RID | | |
-| be_chain | APEX, RAA, HDA, UAS, RID | | |
+| be_chain | RAA, HDA, UAS, RID | | |
 | utm | | UAS, RID | |
 | uas | | UA, UAS, RID | |
 | uas_serial_number | UA, UAS, RID | | |
