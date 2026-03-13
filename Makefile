@@ -11,7 +11,7 @@ ${DRAFT}-${VERSION}.txt: ${DRAFT}.txt
 	xml2rfc --v2v3 ${DRAFT}.xml
 	mv ${DRAFT}.v2v3.xml ${DRAFT}.xml
 	xml2rfc --v3 --html ${DRAFT}.xml
-	$(OPEN) ${DRAFT}.html
+# 	$(OPEN) ${DRAFT}.html
 
 %.txt: %.xml
 	xml2rfc --text -o $@ $?

@@ -13,7 +13,7 @@ DIMEs provide to their clients in a public method the following information:
 - X.509 policies on the field contents of a Certificate Signing Request (CSR) and Certificate
   - Of importance is the Subject contents for a CSR and the HHIT Entity Type being registered as this could be affected by CAA policy
 
-To declare the map elements being using in any of the DIME structures the registered Media Types in {{iana-media-types}} are used in the HTTP Content-Type header. All of these use the Aviation Keys registry of {{IANA.DRIP}}.
+The map elements being using in any of the token use the HOME Aviation Parameters registry of {{IANA.DRIP}}.
 
 ## Registration
 

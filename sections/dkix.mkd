@@ -4,10 +4,10 @@ The DKIX is part of the {{ICAO.ACCP}} to support not just UAS but also general a
 
 - all entities 
   - use {{RFC9374}} for identity (key algorithm; EdDSA) and identifier
-  - register using REF.HOME.IFACES including {{csr-subject}} and {{cert-san-hmn}}
+  - register using REF.HOME.IFACES including considerations of {{csr-subject}} and {{cert-san-hmn}}
 - all Certificate Authorities 
-  - issue certificates following REF.HOME.IFACES and REF.HOME.IFACES including {{cert-san-hmn}} and {{cert-ca-policy}}
-  - issue Endorsements following {{Section 4.2 of RFC9575}} for any HHIT Entity Type that returns the aviations keys of `be` and `be_chain` per {{response-keys}}
+  - issue certificates following REF.HOME.IFACES and REF.HOME.IFACES including considerations of {{cert-san-hmn}} and {{cert-ca-policy}}
+  - issue Endorsements following {{Section 4.2 of RFC9575}} for any HHIT Entity Type that returns the aviations parameters of `be` and `be_chain` per {{response-keys}}
 
 ## Signing Request: Subject {#csr-subject}
 
