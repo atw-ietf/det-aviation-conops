@@ -10,7 +10,7 @@ An Observer is typically either an individual who has a device capable of wirele
 
 All Observers supporting DRIP:
 
-- adhere to relevant details of {{Section 6.4.2 of RFC9575}} with regards to receive processing of DRIP Special Authentication Method (SAM) data.
+- adhere to relevant details of {{Section 6.4.2 of RFC9575}} with regards to receive processing of DRIP Specific Authentication Method (SAM) data.
   - Processing of SAM data could be deferred or outsourced to a dedicated system.
 - display all DETs following {{RFC5952}} or as described in {{hid-abbrev}}.
 
